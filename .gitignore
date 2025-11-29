@@ -1,0 +1,34 @@
+# --- System & Python ---
+__pycache__/
+*.pyc
+.DS_Store
+.env
+.idea/
+.vscode/
+
+# --- Data Privacy & Input ---
+# Ignore all raw tables and processed CSVs
+data/raw/*
+data/processed/*
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+
+# --- Geospatial Assets (Prevent Repo Bloat) ---
+# Shapefiles are heavy and consist of multiple file parts.
+# We ignore the folder contents to keep the repo lightweight.
+04_shapefiles/*
+!04_shapefiles/.gitkeep
+
+# Global ignore for common GIS extensions (just in case)
+*.shp
+*.shx
+*.dbf
+*.prj
+*.sbn
+*.sbx
+*.cpg
+*.geojson
+
+# --- Visualization ---
+# Ignore Power BI lock files (but keep the .pbix dashboard)
+*.pbix.lock
